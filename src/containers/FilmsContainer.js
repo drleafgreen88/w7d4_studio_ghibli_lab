@@ -28,22 +28,27 @@ const FilmsContainer = () => {
         // setSelectedFilm(film)
        // event.preventDefault();
         const favouriteFilmCopy = [...favouriteFilm]
-        favouriteFilmCopy.push(selectedFilm)
+        if(favouriteFilmCopy.indexOf(selectedFilm) === -1){
+            favouriteFilmCopy.push(selectedFilm)
+        }
+        // if (selectedFilm !== favouriteFilmCopy)
+        // {favouriteFilmCopy.push(selectedFilm)}
+        // favouriteFilmCopy.push(selectedFilm)
         setFavouriteFilm(favouriteFilmCopy);
         //setFavouriteFilm(["dd"])
     }
 
     return(
         <div className ="main-container">
-        <FilmList films={films} onFilmClick={onFilmClick} />
-        <FilmSelect films={films} onFilmSelected={onFilmSelected} /> 
+        <FilmList films={films} onFilmClick={onFilmClick} /> 
         {selectedFilm ? 
             <FilmDetails selectedFilm={selectedFilm} /> : 
             null}
         {favouriteFilm ?
             <FavouriteFilms favouriteFilm={favouriteFilm} />
             :
-            null}  
+            null}
+        <FilmSelect films={films} onFilmSelected={onFilmSelected} />  
         </div>
     )
 }

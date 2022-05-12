@@ -5,9 +5,28 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: blanchedalmond;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1 {
+  font-family: 'Monoton', cursive;
+  font-size: 4em;
+  margin: 0;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Monoton', cursive;
+  font-size: 4em;
+  margin: 0;
+  text-align: center;
+}
+
+li {
+  font-style: italic;
 }
